@@ -2,27 +2,21 @@
 
 <ol>
     @foreach ($clans as $clan)
-    <li>{{$clan->ime}} {{$clan->prezime}}</li>
+    <li>
+        <form action="{{route('clans.edit', $clan->id)}}" method="GET" style="display: inline;">
+            @csrf
+            <button type="submit">Uredi</button>
+        </form>
+        <form action="{{route('clans.confirm-delete', $clan->id)}}" method="GET" style="display: inline;">
+            @csrf
+            @method("DELETE")
+            <button type="submit">Obriši</button>
+        </form>
+        {{$clan->ime}} 
+        {{$clan->prezime}}
+        <hr>
+    </li>
     @endforeach
 </ol>
-<br>
-
-<table border="1">
-    @foreach ($clans as $clan)
-        <tr>
-            <td>{{$clan->ime}}</td>
-            <td>{{$clan->prezime}}</td>
-            <td>
-                <a href="{{route('clans.edit', $clan->id)}}">Uredi</a>
-                <form action="{{route('clans.destroy', $clan->id)}}" method="POST">
-                    @csrf
-                    @method("DELETE")
-                    <button type="submit">Obriši</button>
-                </form>
-            </td>
-        </tr>
-    @endforeach
-    <tr><a href="{{route('clans.create')}}">Dodaj novog člana</a></tr>
-</table>
-
+<a href="{{route('clans.create')}}">Dodaj novog člana</a>
 

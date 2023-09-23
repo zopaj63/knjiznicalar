@@ -46,6 +46,12 @@ class ClanController extends Controller
         return redirect()->route("clans.index");
     }
 
+    // metoda za potvrdu brisanja zapisa
+    public function confirmDelete(Clan $clan)
+    {
+        return view('clan.confirm-delete', compact('clan'));
+    }
+
     // metoda za brisanje podatka
     public function destroy(Clan $clan)
     {

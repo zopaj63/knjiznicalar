@@ -4,5 +4,5 @@
     @csrf
     @method("DELETE")
     <button type="submit">Izbriši</button>
-    <a href="{{route('knjigas.index')}}">Odustani</a>
+    <button onclick="{{route('knjigas.index')}}">Odustani</button>
 </form>
