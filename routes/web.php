@@ -24,9 +24,9 @@ Route::resource("clans", ClanController::class); //resource stvara rute za sve C
 Route::resource("knjigas", KnjigaController::class);
 Route::resource("posudbas", PosudbaController::class);
 
-Route::get("/knjigas/{knjiga}/confirmDelete", [KnjigaController::Class, "confirmDelete"])->name("knjigas.confirm-delete");
-
 /*
 umjesto resource, ručno pisanje rute edit bilo bi:
 Route::get()
 */
+
+Route::get("/knjigas/{knjiga}/confirmDelete", [KnjigaController::Class, "confirmDelete"])->name("knjigas.confirm-delete");
