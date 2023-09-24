@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Posudba;
 
 class PosudbaController extends Controller
 {
@@ -19,13 +20,13 @@ class PosudbaController extends Controller
            return view("posudba.create");
        }
 
-           // metoda za spremanje zapisa u bazu
-    public function store(Request $request)
-    {
+        // metoda za spremanje zapisa u bazu
+        public function store(Request $request)
+        {
 
-        
+            
+        }
+   
+   
+
     }
-   
-   
-       // petak crUD 
-}
