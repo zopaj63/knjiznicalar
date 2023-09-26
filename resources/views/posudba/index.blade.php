@@ -2,7 +2,11 @@
 
 <ol>
     @foreach ($posudbas as $posudba)
-    <li>{{$posudba->id}} - Član ID: {{$posudba->clan_id}} Knjiga ID: {{$posudba->knjiga_id}} Datum posudbe: {{$posudba->datum_posudbe}}</li>
+    <li>{{$posudba->id}} - 
+        Član ID: {{$posudba->clan_id}} 
+        Knjiga ID: {{$posudba->knjiga_id}} 
+        Datum posudbe: {{$posudba->datum_posudbe}}
+    </li>
     @endforeach
 </ol>
 <br>

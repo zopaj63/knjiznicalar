@@ -15,8 +15,9 @@
             <td>{{$knjiga->autor}}</td>
             <td>{{$knjiga->god_izd}}</td>
             <td>
-                <form action="{{route('knjigas.edit', $knjiga->id)}}" method="GET">
+                <form action="{{route('knjigas.edit', $knjiga->id)}}" method="POST">
                     @csrf
+                    @method("GET")
                     <button type="submit">Uredi</button>
                 </form>
             </td>

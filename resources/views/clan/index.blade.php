@@ -3,8 +3,9 @@
 <ol>
     @foreach ($clans as $clan)
     <li>
-        <form action="{{route('clans.edit', $clan->id)}}" method="GET" style="display: inline;">
+        <form action="{{route('clans.edit', $clan->id)}}" method="POST" style="display: inline;">
             @csrf
+            @method("GET")
             <button type="submit">Uredi</button>
         </form>
         <form action="{{route('clans.confirm-delete', $clan->id)}}" method="GET" style="display: inline;">
