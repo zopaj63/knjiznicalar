@@ -3,6 +3,10 @@
 <form action="{{route('knjigas.destroy', $knjiga->id)}}" method="POST">
     @csrf
     @method("DELETE")
-    <button type="submit">Izbriši</button>
-    <button onclick="{{route('knjigas.index')}}">Odustani</button>
+    <button type="submit">Obriši</button>
+</form>
+
+
+<form action="{{route('knjigas.index')}}" method="GET">
+    <button type="submit">Odustani</button>
 </form>
