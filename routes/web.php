@@ -29,6 +29,7 @@ umjesto resource, ručno pisanje rute edit bilo bi:
 Route::get("/clans/{clan}/edit", "ClanController@edit")->name(clans.edit);
 */
 
+Route::get("/clans/{clan}/confirmDelete", [ClanController::Class, "confirmDelete"])->name("clans.confirm-delete");
+
 Route::get("/knjigas/{knjiga}/confirmDelete", [KnjigaController::Class, "confirmDelete"])->name("knjigas.confirm-delete");
 
-Route::get("/clans/{clan}/confirmDelete", [ClanController::Class, "confirmDelete"])->name("clans.confirm-delete");

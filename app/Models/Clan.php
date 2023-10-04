@@ -8,5 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Clan extends Model
 {
     use HasFactory;
-    protected $fillable=["ime", "prezime"];
+
+    // definiranje baze i tablice na koju se odnosi model
+    protected $connection="mysql";
+    protected $table="clans";
+
+    protected $fillable=[
+        "ime", 
+        "prezime",
+        "clanski_broj",
+    ];
 }

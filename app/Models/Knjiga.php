@@ -8,5 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Knjiga extends Model
 {
     use HasFactory;
+
+    protected $connection="mysql";
+    protected $table="knjigas";
+
     protected $fillable=["naslov", "autor", "god_izd"];
 }
