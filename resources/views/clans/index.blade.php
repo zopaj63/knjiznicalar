@@ -1,9 +1,9 @@
 <h1>Lista članova</h1>
 
 @if (session('success'))
-    <h3>{{session('success')}}
+    <h3 style="color: green;">{{session('success')}}
 @elseif (session('error'))
-    <h3>{{session('error')}}
+    <h3 style="color: red;">{{session('error')}}
 @endif
 
 <ol>

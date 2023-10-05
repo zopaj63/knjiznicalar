@@ -52,7 +52,7 @@ class ClanController extends Controller
         $request->validate([
             "ime"=>"required",
             "prezime"=>"required",
-            "clanski_broj"=>"required|unique:clans,clanski_broj,".$clan->id,
+            "clanski_broj"=>"required|unique:clans",
         ]);
 
         //ažuriranje
